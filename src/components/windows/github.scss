@@ -1,0 +1,70 @@
+.cards {
+  overflow: scroll;
+  height: 100%;
+  padding: 0.75rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  .card {
+    max-width: 20rem;
+    min-width: 10rem;
+    padding-inline: 1rem;
+    padding-block: 0.75rem;
+
+    background-color: #1d1d1d;
+    border-radius: 0.5rem;
+    color: rgb(245, 240, 240);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    img {
+      width: 100%;
+      border-radius: 0.2rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    
+    }
+
+    .description{
+        opacity: 0.7;
+        word-spacing: 0.3rem;
+        line-height: 1.2rem;
+    }
+
+    .tags{
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        .tag{
+            background-color: rgb(89, 96, 89);
+            width: fit-content;
+            padding-inline: 1rem;
+            padding-block: 0.5rem;
+            border-radius: 0.5rem;
+            white-space:nowrap;
+        }
+    }
+
+    .urls{
+        display: flex;
+        gap: 1rem;
+
+        a{
+            color: white;
+        }
+    }
+  }
+
+}
+
+.cards::-webkit-scrollbar{
+    display: none;
+}
