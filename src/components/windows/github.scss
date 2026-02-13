@@ -2,7 +2,7 @@
   overflow: scroll;
   height: 100%;
   padding: 0.75rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -63,8 +63,4 @@
     }
   }
 
-}
-
-.cards::-webkit-scrollbar{
-    display: none;
 }
