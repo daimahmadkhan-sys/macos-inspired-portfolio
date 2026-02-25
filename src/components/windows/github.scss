@@ -27,40 +27,37 @@
     }
 
     h1 {
-        font-size: 1.5rem;
-        font-weight: 500;
-    
+      font-size: 1.5rem;
+      font-weight: 500;
     }
 
-    .description{
-        opacity: 0.7;
-        word-spacing: 0.3rem;
-        line-height: 1.2rem;
+    .description {
+      opacity: 0.7;
+      word-spacing: 0.3rem;
+      line-height: 1.2rem;
     }
 
-    .tags{
-
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        .tag{
-            background-color: rgb(89, 96, 89);
-            width: fit-content;
-            padding-inline: 1rem;
-            padding-block: 0.5rem;
-            border-radius: 0.5rem;
-            white-space:nowrap;
-        }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      .tag {
+        background-color: rgb(89, 96, 89);
+        width: fit-content;
+        padding-inline: 1rem;
+        padding-block: 0.5rem;
+        border-radius: 0.5rem;
+        white-space: nowrap;
+      }
     }
 
-    .urls{
-        display: flex;
-        gap: 1rem;
+    .urls {
+      display: flex;
+      gap: 1rem;
 
-        a{
-            color: white;
-        }
+      a {
+        color: white;
+      }
     }
   }
-
 }

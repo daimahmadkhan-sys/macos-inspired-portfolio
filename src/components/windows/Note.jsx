@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import MacWindow from "./MacWindow";
-import "./note.scss"
+import "./note.scss";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atelierDuneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-
-
-const Note = ({ windowName,setWindowState}) => {
-
+const Note = ({ windowName, setWindowState ,setTopZ}) => {
   const [markdown, setMarkdown] = useState(null);
 
   useEffect(() => {
@@ -17,11 +14,16 @@ const Note = ({ windowName,setWindowState}) => {
       .then((text) => setMarkdown(text));
   }, []);
 
-
   return (
-    <MacWindow windowName={windowName} setWindowState={setWindowState}>
+    <MacWindow windowName={windowName} setWindowState={setWindowState} setTopZ={setTopZ}>
       <div className="note-window">
-        {markdown ? <SyntaxHighlighter language="typescript" style={atelierDuneDark}>{markdown}</SyntaxHighlighter> : <p>Loading...</p>}
+        {markdown ? (
+          <SyntaxHighlighter language="typescript" style={atelierDuneDark}>
+            {markdown}
+          </SyntaxHighlighter>
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </MacWindow>
   );

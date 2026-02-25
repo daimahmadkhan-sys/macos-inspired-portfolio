@@ -1,7 +1,6 @@
 import React from "react";
 import "./dock.scss";
 
-
 const Dock = ({ windowState, setWindowState }) => {
   return (
     <footer className="dock">
@@ -31,7 +30,7 @@ const Dock = ({ windowState, setWindowState }) => {
       </div>
       <div
         onClick={() => {
-          window.open("https://calendar.google.com/","_blank")
+          window.open("https://calendar.google.com/", "_blank");
         }}
         className="icon calender"
       >
@@ -47,15 +46,15 @@ const Dock = ({ windowState, setWindowState }) => {
       </div>
       <div
         onClick={() => {
-         window.open("mailto:daimahmadkhan@gmail.com","_blank")
+          window.open("mailto:daimahmadkhan@gmail.com", "_blank");
         }}
         className="icon mail"
       >
         <img src="/doc-icon/mail.svg" alt="" />
       </div>
       <div
-        onClick={() => {window.open("https://www.linkedin.com/in/daim-khan-73b564328?utm_source=share_via&utm_content=profile&utm_medium=member_android","_blank")
-         
+        onClick={() => {
+          window.open("https://www.linkedin.com/in/daimahmadkhan/", "_blank");
         }}
         className="icon link"
       >

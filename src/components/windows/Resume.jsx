@@ -1,15 +1,15 @@
-import React from 'react'
-import MacWindow from './MacWindow'
-import "./resume.scss"
+import React from "react";
+import MacWindow from "./MacWindow";
+import "./resume.scss";
 
-const Resume = ({ windowName,setWindowState}) => {
+const Resume = ({ windowName, setWindowState,setTopZ }) => {
   return (
-    <MacWindow windowName={windowName} setWindowState={setWindowState}>
-        <div className="resume-window">
-            <embed src="/resume.pdf" frameborder="0"></embed>
-        </div>
+    <MacWindow windowName={windowName} setWindowState={setWindowState} setTopZ={setTopZ}>
+      <div className="resume-window">
+        <embed src="/resume.pdf" frameboarder="0"></embed>
+      </div>
     </MacWindow>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;
