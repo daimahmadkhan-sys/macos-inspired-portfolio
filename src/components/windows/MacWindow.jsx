@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Rnd } from "react-rnd";
 import "./window.scss";
+import { motion } from "framer-motion";
+
 let globalZ = 100;
+
 const MacWindow = ({
   children,
   width = "46vw",
@@ -12,22 +15,45 @@ const MacWindow = ({
   const [zIndex, setZIndex] = useState(globalZ++);
 
   const bringToFront = () => {
-    const newZ = topZ + 1;
     globalZ += 1;
     setZIndex(globalZ);
   };
   return (
     <Rnd
+      dragHandleClassName="nav"
       style={{ zIndex }}
       onMouseDown={bringToFront}
       default={{
-        width: width,
-        height: height,
+        width,
+        height,
         x: 200,
         y: 150,
       }}
     >
-      <div className="window">
+      <motion.div
+        className="window"
+        initial={{
+          scale: 0.4,
+          opacity: 0,
+          y: 100,
+        }}
+        animate={{
+          scale: 1,
+          opacity: 1,
+          y: 0,
+        }}
+        exit={{
+          scale: 0.4,
+          opacity: 0,
+          y: 100,
+        }}
+        transition={{
+          type: "spring",
+          damping: 18,
+          stiffness: 180,
+          mass: 0.8,
+        }}
+      >
         <div className="nav">
           <div className="dots">
             <div
@@ -44,7 +70,7 @@ const MacWindow = ({
           </div>
         </div>
         <div className="main-content">{children}</div>
-      </div>
+      </motion.div>
     </Rnd>
   );
 };

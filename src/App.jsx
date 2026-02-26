@@ -7,6 +7,7 @@ import Note from "./components/windows/Note";
 import Resume from "./components/windows/Resume";
 import Spotify from "./components/windows/Spotify";
 import Cli from "./components/windows/Cli.jsx";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [windowState, setWindowState] = useState({
@@ -16,46 +17,35 @@ function App() {
     spotify: false,
     cli: false,
   });
-  const [topZ, setTopZ] = useState(10);
   return (
     <main>
       <Nav />
       <Dock windowState={windowState} setWindowState={setWindowState} />
-      {windowState.github && (
-        <Github
-          windowName="github"
-          setWindowState={setWindowState}
-          setTopZ={setTopZ}
-        />
-      )}
-      {windowState.note && (
-        <Note
-          windowName="note"
-          setWindowState={setWindowState}
-          setTopZ={setTopZ}
-        />
-      )}
-      {windowState.resume && (
-        <Resume
-          windowName="resume"
-          setWindowState={setWindowState}
-          setTopZ={setTopZ}
-        />
-      )}
-      {windowState.spotify && (
-        <Spotify
-          windowName="spotify"
-          setWindowState={setWindowState}
-          setTopZ={setTopZ}
-        />
-      )}
-      {windowState.cli && (
-        <Cli
-          windowName="cli"
-          setWindowState={setWindowState}
-          setTopZ={setTopZ}
-        />
-      )}
+      <AnimatePresence>
+        {windowState.github && (
+          <Github windowName="github" setWindowState={setWindowState} />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {windowState.note && (
+          <Note windowName="note" setWindowState={setWindowState} />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {windowState.resume && (
+          <Resume windowName="resume" setWindowState={setWindowState} />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {windowState.spotify && (
+          <Spotify windowName="spotify" setWindowState={setWindowState} />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {windowState.cli && (
+          <Cli windowName="cli" setWindowState={setWindowState} />
+        )}
+      </AnimatePresence>
     </main>
   );
 }

@@ -16,7 +16,8 @@
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-
+  backdrop-filter: blur(20px);
+  transform-origin: center;
   font-weight: 500;
   .nav {
     padding-inline: 0.75rem;
