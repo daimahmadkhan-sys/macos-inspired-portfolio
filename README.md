@@ -37,15 +37,6 @@ A desktop-style portfolio built with React that simulates real macOS window beha
 
 ---
 
-## Installation
-
-git clone https://github.com/yourusername/your-repo.git  
-cd your-repo  
-npm install  
-npm run dev  
-
----
-
 ## Author
 
 Daim Khan  
