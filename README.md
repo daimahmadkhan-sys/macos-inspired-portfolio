@@ -2,7 +2,7 @@
 
 A desktop-style portfolio built with React that simulates real macOS window behavior, including drag functionality, dynamic stacking, and smooth open/close animations.
 
-🔗 Live Demo: https://your-portfolio.vercel.app
+🔗 Live Demo: https://macos-inspired-portfolio.vercel.app/
 
 ---
 
